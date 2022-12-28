@@ -52,8 +52,8 @@ if __name__ == "__main__":
 
     stereo = getStereoPair(pipeline, monoLeft, monoRight)
 
-    xoutDepth = pipeline.createXLinkOut()
-    xoutDepth.setStreamName("depth")
+    # xoutDepth = pipeline.createXLinkOut()
+    # xoutDepth.setStreamName("depth")
 
     xoutDisp = pipeline.createXLinkOut()
     xoutDisp.setStreamName("disparity")
@@ -64,7 +64,7 @@ if __name__ == "__main__":
     xoutRectifiedRight = pipeline.createXLinkOut()
     xoutRectifiedRight.setStreamName("rectifiedRight")
 
-    stereo.depth.link(xoutDepth.input)
+    # stereo.depth.link(xoutDepth.input)
     stereo.disparity.link(xoutDisp.input)
     stereo.rectifiedLeft.link(xoutRectifiedLeft.input)
     stereo.rectifiedRight.link(xoutRectifiedRight.input)
